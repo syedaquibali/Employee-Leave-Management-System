@@ -1,0 +1,71 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- link  CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>ELMS</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <a class="navbar-brand" href="/"><strong>LEAVE MANAGEMENT SYSTEM</strong></a>
+    <div class="form-inline my-2 my-lg-10">
+
+        <a href="/logout"class="btn btn-warning">User Logout</a>&nbsp;
+
+    </div>
+</nav>
+<nav class="navbar navbar-light bg-light">
+  <a style="text-align:center" class="navbar-brand" href="#"><strong>Employee Dashboard</strong</a>
+</nav>
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Employee Dashboard</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/apply_leave/" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+          Apply Leave
+        </a>
+      </li>
+      <li>
+        <a href="/leave_report/" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          My Leave Request
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          Logout
+        </a>
+      </li>
+    </ul>
+    <hr>
+
+  </div>
+</body>
+</html>

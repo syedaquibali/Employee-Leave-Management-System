@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Add Employee</title>
+</head>
+<body>
+
+<a class="p-3 text-dark" href="/add_employee/"><h1 class="text-center">Add Employee Record</h1></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-info"></nav>
+
+<div class="bg-nav text-red d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">GenfutureX</h5>
+    <nav class="my-2 my-md-0 mr-md-3 text-dark">
+        <a class="p-2 text-dard" href="/">Home</a>
+        <a class="p-2 text-dard" href="/add_employee/>Add Student</a>
+        <a class=" p-2 text-dard" href="#">Details</a>
+        <a class="p-2 text-dard" href="#">Setting</a>
+    </nav>
+    <a class="btn btn-outline-primary p-2 text-dark" href="/logout">Log out</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md 12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <form action="/add_employee/" method="POST">
+                        {% csrf_token %}
+                        {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{error}}
+                        </div>
+                        {% endif %}
+                        <div class="md-3">
+                            <label for="first_name">First Name</label>
+                            <input name="first_name" type="text" id="first_name" class="form-control"
+                                   placeholder="Enter Your First Name" required>
+                        </div>
+                        <div class="md-3">
+                            <label for="last_name">Last Name</label>
+                            <input name="last_name" type="text" id="last_name" class="form-control"
+                                   placeholder="Enter Your Last Name" required>
+                        </div>
+                        <div>
+                            <div class="md-3">
+                                <label for="email">Email Address</label>
+                                <input name="email" type="text" id="email" class="form-control"
+                                       placeholder="Enter Your Email Address" required>
+                            </div>
+                            <div class="md-3">
+                                <label for="password">Password</label>
+                                <input name="password" type="text" id="password" class="form-control"
+                                       placeholder="Enter Your Password" required>
+                            </div>
+                            <div class="md-3">
+                                <label for="designation">Designation</label>
+                                <input name="designation" type="text" id="designation" class="form-control"
+                                       placeholder="Enter Your Designation">
+                            </div>
+                            <div class="md-3">
+                                <label for="department">Department</label>
+                                <select name="department" id="department" class="form-control">
+                                    <option value="" disabled selected hidden>Choose Your Department</option>
+
+                                    <option value="development">Development</option>
+                                    <option value="testing">Testing</option>
+                                    <option value="ml">Ml</option>
+                                </select>
+
+
+                            </div>
+                            <div>
+                                <div class="md-3">
+                                    <label for="mobile">Mobile</label>
+                                    <input name="mobile" type="text" id="mobile" class="form-control"
+                                           placeholder="Enter Your Mobile Number">
+                                </div>
+                                <div class="md-3">
+                                    <label for="address">Address</label>
+                                    <input name="address" type="text" id="address" class="form-control"
+                                           placeholder="Enter Address" required>
+                                </div>
+                                <div class="md-3">
+                                    <label for="city">City</label>
+                                    <input name="city" type="text" id="city" class="form-control"
+                                           placeholder="Enter Your First Name" required>
+                                </div>
+                                <div class="md-3">
+                                    <label for="region">Region</label>
+                                    <input name="region" type="text" id="region" class="form-control"
+                                           placeholder="Enter Your Region" required>
+                                </div>
+                                <div class="md-3">
+                                    <label for="zipcode">Zipcode</label>
+                                    <input name="zipcode" type="text" id="zipcode" class="form-control"
+                                          placeholder="Enter Your Zipcode" required>
+                                </div>
+                                <div class="md-3">
+                                    <label for="country">Country</label>
+                                    <input name="country" type="text" id="country" class="form-control"
+                                          placeholder="Enter Your country" required>
+                                </div>
+
+
+                                <div class="container text-center my-2">
+                                    <button class="btn btn-primary">
+                                        Add Employee
+                                    </button>
+
+                                </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
